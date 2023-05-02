@@ -502,6 +502,7 @@ img {
   color: var(--color-cloud);
   background-color: var(--color-iris);
 }
+.image-box>.image-box-desc{transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 .projects-link:hover .image-box-desc,
 .projects-link:focus .image-box-desc {
   transform: translatey(0%);
