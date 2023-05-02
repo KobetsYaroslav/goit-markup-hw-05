@@ -509,7 +509,7 @@ img {
   left: 0;
   margin-bottom: 120px;
   transform: translatey(100%);
-  transition: transform var(--transition);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--color-cloud);
   background-color: var(--color-iris);
 }
