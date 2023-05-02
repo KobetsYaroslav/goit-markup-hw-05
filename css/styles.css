@@ -142,11 +142,11 @@ img {
   letter-spacing: 0.02em;
   padding: 24px 0;
   color: var(--color-ocean);
+  transition: var(--transition-color);
 }
 .nav-link:hover,
 .nav-link:focus {
   color: var(--color-ocean);
-  transition: var(--transition-color);
 }
 .current::after {
   content: "";
