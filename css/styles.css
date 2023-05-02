@@ -15,7 +15,9 @@
   --color-white: #ffffff;
   --color-dairy: #fcfcfc;
   /* Transition */
-  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-color: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bg: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bc: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* =========== */
@@ -133,21 +135,18 @@ img {
   margin-right: 332px;
 }
 .nav-item {
+  position: relative;
   font-weight: 500;
   letter-spacing: 0.02em;
-  color: var(--color-grey);
   padding: 24px 0;
-  transition: color var(--transition);
+  color: var(--color-ocean);
+  transition: var(--transition-color);
 }
 .nav-item:hover,
 .nav-item:focus {
   color: var(--color-ocean);
 }
-.nav-studio {
-  position: relative;
-  color: var(--color-ocean);
-}
-.nav-studio::after {
+.nav-item::after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -157,20 +156,7 @@ img {
   border-bottom: 4px solid var(--color-ocean);
   border-radius: 2px;
 }
-.nav-portfolio {
-  position: relative;
-  color: var(--color-ocean);
-}
-.nav-portfolio::after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  background-color: #404bbf;
-  border-bottom: 4px solid var(--color-ocean);
-  border-radius: 2px;
-}
+
 .contacts {
   font-style: normal;
   padding-top: 24px;
@@ -184,7 +170,7 @@ img {
 .contacts-link {
   letter-spacing: 0.02em;
   color: var(--color-slate);
-  transition: color var(--transition);
+  transition: var(--transition-color);
 }
 .contacts-link:hover,
 .contacts-link:focus {
@@ -237,11 +223,11 @@ img {
   justify-content: center;
   background-color: var(--color-iris);
   border-radius: 50%;
+  transition: var(--transition-bg);
 }
 .social-link:hover,
 .social-link:focus {
   background-color: var(--color-green);
-  transition: var(--transition);
 }
 .social-icon {
   fill: var(--color-cloud);
@@ -292,11 +278,11 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
+  transition: var(--transition-bg);
 }
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: var(--color-ocean);
-  transition: var(--transition);
 }
 
 /* ========= */
@@ -392,11 +378,11 @@ img {
   height: 100%;
   background-color: var(--color-iris);
   border-radius: 50%;
+  transition: var(--transition-bg);
 }
 .team-social-link:hover,
 .team-social-link:focus {
   background-color: var(--color-ocean);
-  transition: var(--transition);
 }
 .team-icon {
   fill: var(--color-cloud);
@@ -431,12 +417,12 @@ img {
   color: var(--color-light-slate);
   border: 1px solid var(--color-light-slate);
   border-radius: 4px;
+  transition: var(--transition-bc), var(--transition-color);
 }
 .customers-link:hover,
 .customers-link:focus {
   color: var(--color-ocean);
   border-color: var(--color-ocean);
-  transition: var(--transition);
 }
 .customers-icon {
   fill: currentColor;
@@ -456,6 +442,7 @@ img {
   display: flex;
   justify-content: center;
   margin-bottom: 72px;
+  transition: var(--transition-color), var(--transition-bg);
 }
 .filters-item :hover,
 .filters-item :focus {
@@ -465,7 +452,6 @@ img {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   border: 1px solid transparent;
-  transition: var(--transition);
 }
 .filters-btn {
   padding: 12px 24px;
