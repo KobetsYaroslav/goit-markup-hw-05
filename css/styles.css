@@ -491,6 +491,10 @@ img {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+.image-box {
+  position: relative;
+  overflow: hidden;
+}
 .image-box-desc {
   position: absolute;
   padding: 40px 32px;
@@ -501,16 +505,11 @@ img {
   transform: translatey(100%);
   color: var(--color-cloud);
   background-color: var(--color-iris);
-  transition: transform var(--transition);
 }
 .projects-link:hover .image-box-desc,
 .projects-link:focus .image-box-desc {
   transform: translatey(0%);
-  transition: var(--transition);
-}
-.image-box {
-  position: relative;
-  overflow: hidden;
+  transition: transform var(--transition);
 }
 .projects-content {
   padding-top: 32px;
