@@ -137,11 +137,11 @@ img {
   letter-spacing: 0.02em;
   color: var(--color-grey);
   padding: 24px 0;
+  transition: color var(--transition);
 }
 .nav-item:hover,
 .nav-item:focus {
   color: var(--color-ocean);
-  transition: color var(--transition);
 }
 .nav-studio {
   position: relative;
@@ -184,11 +184,11 @@ img {
 .contacts-link {
   letter-spacing: 0.02em;
   color: var(--color-slate);
+  transition: color var(--transition);
 }
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--color-ocean);
-  transition: color var(--transition);
 }
 
 /* ====== */
