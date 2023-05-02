@@ -141,12 +141,12 @@ img {
   font-weight: 500;
   letter-spacing: 0.02em;
   padding: 24px 0;
-  color: var(--color-navy-blue);
-  transition: var(--transition-color);
+  color: var(--color-ocean);
 }
 .nav-link:hover,
 .nav-link:focus {
   color: var(--color-ocean);
+  transition: var(--transition-color);
 }
 .current::after {
   content: "";
