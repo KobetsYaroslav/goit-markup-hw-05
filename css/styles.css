@@ -136,7 +136,7 @@ img {
   gap: 40px;
   margin-right: 332px;
 }
-.nav-item {
+.nav-link {
   position: relative;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -144,17 +144,17 @@ img {
   color: var(--color-ocean);
   transition: var(--transition-color);
 }
-.nav-item:hover,
-.nav-item:focus {
+.nav-link:hover,
+.nav-link:focus {
   color: var(--color-ocean);
 }
-.nav-item::after {
+.nav-link::after {
   content: "";
   position: absolute;
   bottom: -1px;
   left: 0;
   width: 100%;
-  background-color: #404bbf;
+  background-color: var(--color-ocean);
   border-bottom: 4px solid var(--color-ocean);
   border-radius: 2px;
 }
